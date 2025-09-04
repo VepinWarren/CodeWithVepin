@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing - CodeWithVepin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body style="background:#0e0e0e;color:#f1f1f1;font-family:Poppins,sans-serif;padding:40px">
+    <h2 style="color:gold;text-align:center">Number Guessing Game</h2>
+    <pre style="background:#1e1e1e;padding:20px;border-radius:12px"><code class="language-python">
+import random
+
+number = random.randint(1, 100)
+print("Guess the number between 1 and 100!")
+
+while True:
+    guess = int(input("Enter your guess: "))
+    if guess < number:
+        print("Too low!")
+    elif guess > number:
+        print("Too high!")
+    else:
+        print(" Correct! The number was", number)
+        break
+    </code></pre>
+    <a href="index.html" style="color:gold;text-decoration:none;font-weight:600">⬅ Back to Home</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>

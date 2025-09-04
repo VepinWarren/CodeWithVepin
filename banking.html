@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banking System - CodeWithVepin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body style="background:#0e0e0e;color:#f1f1f1;font-family:Poppins,sans-serif;padding:40px">
+    <h2 style="color:gold;text-align:center">Banking System</h2>
+    <pre style="background:#1e1e1e;padding:20px;border-radius:12px"><code class="language-python">
+balance = 0 
+bank_balance = open("balance.txt","r")
+data = bank_balance.read()
+if data != "":
+    balance+=float(data)
+while True:
+    try:
+        print("-----Bank System-----")
+        print("")
+        print("1. Deposit Money")
+        print("2. Withdraw Money")
+        print("3. Check Balance")
+        print("4. Exit") 
+        print("")
+        user = float(input("Enter Choice (1-4): "))
+        print("")
+
+        if user == 1:
+            Deposit = float(input("Enter The Amount: "))
+            print("")
+            balance+=Deposit
+            print(f"Deposited Successfully! New Balance: {balance}")
+            print("")
+        elif user == 2:
+            Withdraw = input("Enter The Amount: To Withdraw all type (all): ")
+            print("")
+            if Withdraw.lower() == "all":
+                balance = 0 
+                print(f"Withdrew All Money! New Balance: {balance}")
+                print("")
+            elif float(Withdraw)>balance:
+                print("Insufficient fund!")
+                print("")
+            else:
+                balance-=float(Withdraw)
+                print(f"WIthdrew {Withdraw}! New Balance: {balance}")
+                print("")
+        elif user == 3:
+            print(f"Current Balance: {balance}")
+            print("")
+        elif user == 4:
+            data1 = open("balance.txt","w")
+            data2 = data1.write(str(balance))
+            break
+
+        elif user<1 or user>4:
+            print("Invalid Choice")
+            print("")
+    except ValueError:
+        print("Invalid Input")
+        print("")
+        continue
+    </code></pre>
+    <a href="index.html" style="color:gold;text-decoration:none;font-weight:600">⬅ Back to Home</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>

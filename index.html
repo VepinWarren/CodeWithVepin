@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeWithVepin - Premium Courses</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0e0e0e;
+            color: #f1f1f1;
+            scroll-behavior: smooth;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #111;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid gold;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            color: gold;
+            font-size: 1.8rem;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: gold;
+        }
+        .auth-buttons {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .auth-buttons a {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: gold;
+            color: #111;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .auth-buttons a:hover {
+            background: #ffcc00;
+        }
+
+        /* HOME SECTION */
+        .home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a, #0e0e0e);
+            text-align: center;
+            padding: 20px;
+        }
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+
+        /* Background image */
+        background: url("https://i.pinimg.com/1200x/6a/fb/f4/6afbf45910b9b4c344737f76043d2cbc.jpg") no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+        }
+
+        /* Dark transparent overlay */
+        body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* adjust 0.5 for more/less transparency */
+        z-index: -1;
+        }
+        .home {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+
+        /* Background image */
+        background: url("your-image.jpg") no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+        min-height: 100vh; /* makes sure it covers full screen */
+        }
+
+        /* Transparent overlay for entire page */
+        .home::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* change 0.5 for more/less transparency */
+        z-index: -1;
+        }
+
+        .home h1 {
+            font-size: 3rem;
+            color: gold;
+            animation: fadeInDown 2s ease;
+        }
+        .home p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: greenyellow;
+            animation: fadeInUp 2.5s ease;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .container h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: gold;
+        }
+
+        /* COURSES */
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .course {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #2a2a2a;
+        }
+        .course:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+            border: 1px solid gold;
+        }
+        .course img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .course h2 {
+            margin: 20px 0 10px;
+            color: #f1f1f1;
+        }
+        .course p {
+            color: gold;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .course button {
+            background: gold;
+            color: #111;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .course button:hover {
+            background: #ffcc00;
+            transform: scale(1.05);
+        }
+
+        /* GALLERY */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .projects img {
+            width: 100%;
+            border-radius: 12px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+        .projects img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255,215,0,0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            color: #bbb;
+            margin-top: 60px;
+            border-top: 2px solid gold;
+        }
+        footer p {
+            margin: 8px 0;
+        }
+        footer strong {
+            color: gold;
+        }
+    </style>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAHgDBJXSKPfOf7nt7ulDo-bFyI5Bjqr_Y",
+            authDomain: "codewithvepin.firebaseapp.com",
+            projectId: "codewithvepin",
+            storageBucket: "codewithvepin.firebasestorage.app",
+            messagingSenderId: "387688543672",
+            appId: "1:387688543672:web:1fa49f378c9c41fe548b4d",
+            measurementId: "G-55QMS5W4Y0"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        
+        const loginLink = `<a href="login.html">Login</a>`;
+        const signupLink = `<a href="signup.html">Sign Up</a>`;
+        const logoutLink = `<a href="#" id="logoutBtn">Logout</a>`;
+        
+        const nav = document.querySelector('nav');
+        
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, display logout button
+                nav.innerHTML = `
+                    <a href="#home">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#projects">Python projects</a>
+                    <a href="#contact">Contact Us</a>
+                    ${logoutLink}
+                `;
+                document.getElementById('logoutBtn').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    signOut(auth).then(() => {
+                        alert("Logged out successfully!");
+                        window.location.reload();
+                    }).catch((error) => {
+                        console.error("Logout failed: ", error);
+                    });
+                });
+            } else {
+                // User is signed out, display login/signup links
+                nav.innerHTML = `
+                    <a href="#home">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#projects">Python projects</a>
+                    <a href="#contact">Contact Us</a>
+                    ${loginLink}
+                    ${signupLink}
+                `;
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>CodeWithVepin</h1>
+        <nav>
+            </nav>
+    </header>
+
+    <section class="home" id="home">
+        <h1>Welcome to CodeWithVepin</h1>
+        <p>Code With Vepin offers three Python courses - Basics, Intermediate, and Max + Some Data Analysis - designed to help you learn step by step and master Python with real skills.</p>
+    </section>
+
+    <div class="container" id="courses">
+        <h2>Python Courses</h2>
+        <div class="courses">
+            <div class="course">
+                <img src="https://i.pinimg.com/1200x/6a/fb/f4/6afbf45910b9b4c344737f76043d2cbc.jpg" alt="Python Basics">
+                <h2>Python Basics</h2>
+                <p>
+                    ✧ Variables ✧ Data Types ✧ Operators ✧ Input System ✧ Strings ✧ if-else statements
+                    ✧ Lists ✧ Sets ✧ Tuples ✧ Dictionaries ✧ 1 Project
+                </p>
+                <button>To buy call us at +91 9304334674</button>
+            </div>
+            <div class="course">
+                <img src="https://i.pinimg.com/1200x/6a/fb/f4/6afbf45910b9b4c344737f76043d2cbc.jpg" alt="Python Intermediate">
+                <h2>Python Intermediate</h2>
+                <p>
+                    ✧ Python Basics ✧ For Loops ✧ While Loops ✧ Functions ✧ Error Handling
+                    ✧ File Handling ✧ Modules
+                </p>
+                <button>To buy call us at +91 9304334674</button>
+            </div>
+            <div class="course">
+                <img src="https://i.pinimg.com/1200x/6a/fb/f4/6afbf45910b9b4c344737f76043d2cbc.jpg" alt="Python Max">
+                <h2>Python Max + Some Data Analysis</h2>
+                <p>
+                    ✧ Python Intermediate ✧ 5 Projects ✧ Object Oriented Programming
+                    ✧ Inheritance ✧ Data Analysis Using Pandas
+                </p>
+                <button>To buy call us at +91 9304334674</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <a href="calculator.html"><img src="https://i.pinimg.com/736x/6d/16/a3/6d16a301e656ab223942728e9e293e8b.jpg" alt="Calculator"><p>Calculator</p></a>
+            <a href="mega_calculator.html"><img src="https://i.pinimg.com/736x/6d/16/a3/6d16a301e656ab223942728e9e293e8b.jpg" alt="Mega Calculator"><p>Mega Calculator</p></a>
+            <a href="dice_roller.html"><img src="https://i.pinimg.com/736x/6d/16/a3/6d16a301e656ab223942728e9e293e8b.jpg" alt="Dice Roller"><p>Dice Roller</p></a>
+            <a href="number_guess.html"><img src="https://i.pinimg.com/736x/6d/16/a3/6d16a301e656ab223942728e9e293e8b.jpg" alt="Number Guessing"><p>Number Guessing Game</p></a>
+            <a href="rps.html"><img src="https://i.pinimg.com/736x/6d/16/a3/6d16a301e656ab223942728e9e293e8b.jpg" alt="Rock Paper Scissors"><p>Rock Paper Scissors</p></a>
+            <a href="banking.html"><img src="https://i.pinimg.com/736x/6d/16/a3/6d16a301e656ab223942728e9e293e8b.jpg" alt="Banking System"><p>Banking System</p></a>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>Contact Us: <strong>vepinwarren@gmail.com</strong></p>
+        <p>Call Us: <strong>+91 9304334674</strong></p>
+        <p>&copy; Python Courses. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

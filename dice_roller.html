@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Roller - CodeWithVepin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <style>body{font-family:'Poppins',sans-serif;background:#0e0e0e;color:#f1f1f1;padding:40px}h2{color:gold;text-align:center}pre{background:#1e1e1e;padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.5);overflow-x:auto}a.back{display:inline-block;margin-top:20px;color:gold;text-decoration:none;font-weight:600}a.back:hover{color:#ffcc00}</style>
+</head>
+<body>
+    <h2>Dice Roller Project</h2>
+    <pre><code class="language-python">
+import random
+
+print("Dice Roller")
+while True:
+    roll = input("Roll dice? (y/n): ").lower()
+    if roll == "y":
+        print("You rolled:", random.randint(1, 6))
+    else:
+        break
+    </code></pre>
+    <a href="index.html" class="back">⬅ Back to Home</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>

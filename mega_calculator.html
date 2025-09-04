@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mega Calculator - CodeWithVepin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #0e0e0e; color: #f1f1f1; padding: 40px; }
+        h2 { color: gold; text-align: center; }
+        pre { background: #1e1e1e; padding: 20px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.5); overflow-x: auto; }
+        a.back { display: inline-block; margin-top: 20px; color: gold; text-decoration: none; font-weight: 600; }
+        a.back:hover { color: #ffcc00; }
+    </style>
+</head>
+<body>
+    <h2>Mega Calculator Project</h2>
+    <pre><code class="language-python">
+import math
+
+def add(num1,num2):
+    return num1 + num2
+def sub(num1,num2):
+    return num1 - num2 
+def mul(num1,num2):
+    return num1 * num2
+def div(num1,num2):
+    return num1 / num2 
+def sq(num):
+    return num*num
+def sqrt(num):
+    return math.sqrt(num)
+def cb(num):
+    return num*num*num
+def cbrt(num):
+    return math.cbrt(num)
+while True:
+    print("")
+    print("----- Calculator-----")
+    print("")
+    print("1. addition")
+    print("2. subtraction")
+    print("3. multiplication")
+    print("4. division")
+    print("5. square")
+    print("6. square root")
+    print("7. cube")
+    print("8. cube root")
+    print("9. exit")
+    print("")
+    try:
+        op = int(input("Enter Choice (1-9): "))
+        print("")
+    except ValueError:
+        print("Invalid Choice.")
+        quit()
+    if op == 1:
+        try:
+            num1 = float(input("Enter The First Number: "))
+            print("")
+            num2 = float(input("Enter The Second Number: "))
+        except ValueError:
+            print("Invalid Input.")
+            quit()
+        print("")
+        result = add(num1,num2)
+        print(f"Result: {result}")
+    elif op == 2:
+        try:
+            num1 = float(input("Enter The First Number: "))
+            print("")
+            num2 = float(input("Enter The Second Number: "))
+        except ValueError:
+            print("Invalid Input.")
+            quit()
+        print("")
+        result = sub(num1,num2)
+        print(f"Result: {result}")
+    elif op == 3:
+        try:
+            num1 = float(input("Enter The First Number: "))
+            print("")
+            num2 = float(input("Enter The Second Number: "))
+        except ValueError:
+            print("Invalid Input.")
+            quit()
+        print("")
+        result = mul(num1,num2)
+        print(f"Result: {result}")
+    elif op == 4:
+        try:
+            num1 = float(input("Enter The First Number: "))
+            print("")
+            num2 = float(input("Enter The Second Number: "))
+        except ValueError:
+            print("Invalid Input.")
+            quit()
+        print("")
+        result = div(num1,num2)
+        print(F"Result: {result}")
+    elif op == 5:
+        try:
+            num = float(input("Enter The Number: "))
+            print("")
+        except ValueError:
+            print("Invalid Input.")
+            quit()
+        result = sq(num)
+        print(f"Result: {result}")
+    elif op == 6:
+        try:
+            num = float(input("Enter The Number: "))
+            print("")
+        except ValueError:
+            print("Invalid Input.")
+            quit()
+        result = sqrt(num)
+        print(f"Result: {result}")
+    elif op == 7:
+        try:
+            num = float(input("Enter The Number: "))
+            print("")
+        except ValueError:
+            print("Invalid Input.")
+            quit()
+        result = cb(num)
+        print(f"Result: {result}")
+    elif op == 8:
+        try:
+            num = float(input("Enter The Number: "))
+            print("")
+        except ValueError:
+            print("Invalid Input.")
+            quit()
+        result = cbrt(num)
+        print(f"Result: {result}")
+    elif op == 9:
+        break
+    else:
+        print("Invalid Choice.")
+    </code></pre>
+    <a href="index.html" class="back">⬅ Back to Home</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>
